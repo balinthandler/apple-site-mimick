@@ -2,12 +2,18 @@
 *::after,
 *::before {
   box-sizing: border-box;
+  font-size: 1rem;
+}
+body {
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
 }
 
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 1400px;
+  margin: 0 auto 0 auto;
 }
 
 .hero {
@@ -16,9 +22,107 @@
   background-position: 50% 100%;
   background-size: cover;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1400px;
   height: 70vh;
   min-height: 450px;
   padding: 75px;
+  display: grid;
+  justify-content: center;
   /* border: 4px solid red; */
+}
+
+.menu {
+  display: grid;
+  max-width: 800px;
+  grid-template-columns: repeat(7, 1fr) auto;
+  grid-auto-flow: column;
+  border: 1px solid #5E5E5E;
+  border-radius: 5px;
+  background: linear-gradient(
+    #8A8A8A,
+    #707070 50%,
+    #5E5E5E 50%,
+    #777777
+  );
+  box-shadow: 0px 1px 2px 1px rgba(0,0,0,.2);
+
+}
+.menu-items {
+  border-right: 1px solid #5E5E5E;
+  display: grid;
+}
+.menu-items a{
+  color: white;
+  text-decoration: none;
+  text-shadow: 1px 0 1px #5E5E5E;
+  font-size: .8em;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  text-align: center;
+}
+.menu-items a:hover {
+  background: linear-gradient(
+    #414040,
+    #414040 50%,
+    #363535 50%,
+    #3D3C3C
+  );
+}
+
+.search {
+  background: linear-gradient(
+    #8A8A8A,
+    #707070 50%,
+    #5F5F5F 50%,
+    #777777
+  );
+  border-radius: 50px;
+  font-size: .9em;
+  color: white;
+  border: 1px solid #5E5E5E;
+  box-shadow: inset 0px 2px 3px black;
+  margin: 7px 15px;
+  width: 100px;
+
+}
+.hero-content {
+  text-align: center;
+}
+
+.hero-content h1 {
+  color: #fff;
+  font-size: 4rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  margin-bottom: 2rem;
+
+}
+
+.hero-content p {
+  color: #fff;
+  font-size: 2rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  margin-bottom: 2rem;
+
+}
+
+.hero-content a {
+  color: #fff;
+  font-size: 1.5rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  margin-bottom: 2rem;
+  text-decoration: none;
+
+}
+
+.related {
+  display: grid;
+  margin: 5px 0;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 5px;
+}
+
+.related a img{
+  width: 100%;
+
 }
